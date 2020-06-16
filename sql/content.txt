@@ -1,0 +1,33 @@
+create table IF NOT EXISTS `chatbot_info`
+(
+  `id`                      char(32)     not null,
+  `name`                    varchar(64)  not null,
+  `name_type`               varchar(64)  not null,
+  `user_id`                 varchar(64)  not null,
+  `service_id`              varchar(64)  not null,
+  `app_id`                  varchar(64)  not null,
+  `secret`                  varchar(128) not null,
+  `categories`              varchar(64),
+  `callback_url`            varchar(128),
+  `logo`                    varchar(128),
+  `description`             text,
+  `callback_phone_number`   varchar(20),
+  `verification_signatures` varchar(64),
+  `website`                 varchar(128),
+  `version`                 varchar(32),
+  `background_img`          varchar(128),
+  `provider`                varchar(128),
+  `sms_number`              varchar(20),
+  `company`                 varchar(20),
+  `address`                 varchar(200),
+  `email`                   varchar(128),
+  `tc_page`                 varchar(128),
+  `colour`                  varchar(7),
+  `create_at`               bigint(20)   not null default 0,
+  `update_at`               bigint(20)   not null default 0,
+  `status`                  tinyint(4)   not null default 0,
+  `domain_name`             varchar(32)  not null,
+  primary key (id)
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8
+  COLLATE = utf8_bin;
